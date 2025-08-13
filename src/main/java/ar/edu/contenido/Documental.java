@@ -15,6 +15,6 @@ public class Documental extends Contenido{
 
     @Override
     protected double doCosto() {
-        return 2.0;
+        return Idra.getInstance().getValor();
     }
 }
