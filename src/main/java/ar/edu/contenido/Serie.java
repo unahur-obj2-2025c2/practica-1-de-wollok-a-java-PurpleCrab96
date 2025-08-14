@@ -1,19 +1,21 @@
 package ar.edu.contenido;
 
+import java.util.List;
+
 public class Serie extends Contenido {
-    private String creador;
+    private List<Temporada> temporadas = new ArrayList<>();
 
-    public Serie(String titulo, String autor, String creador) {
-        super(titulo, autor);
-        this.creador = creador;
+    public Serie(String titulo, Double costoBase, List<Temporada> temporadas) {
+        super(titulo, costoBase);
+        this.temporadas = temporadas;
     }
 
-    public String getCreador() {
-        return this.creador;
+    public Serie(String titulo, Double costoBase) {
+        super(titulo, costoBase, autor);
     }
 
-    @Override
-    protected double doCosto() {
-        return Idra.getInstance().getValor();
+    public void agregarTemporada(Temporada temporada) {
+        temporadas.add(temporada);
     }
+
 }
