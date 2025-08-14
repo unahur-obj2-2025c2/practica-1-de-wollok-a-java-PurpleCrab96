@@ -18,4 +18,8 @@ public class Serie extends Contenido {
         temporadas.add(temporada);
     }
 
+    @Override
+    protected double doCosto() {
+        return temporadas.stream().mapToDouble(Temporada::costo).average().orElse(0.0);
+    }
 }
