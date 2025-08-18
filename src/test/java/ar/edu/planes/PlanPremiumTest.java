@@ -1,13 +1,14 @@
-import org.junit.Test;
-import static org.junit.Assert.*;
-
 package ar.edu.planes;
 
+import org.junit.Test;
+import static org.junit.Assert.*;
+import ar.edu.usuario.Usuario;
 
 public class PlanPremiumTest {
 
     // Dummy Usuario implementation for testing
-    static class DummyUsuario implements Usuario {}
+    static class DummyUsuario implements Usuario {
+    }
 
     @Test
     void testCostoPlanReturnsCorrectValue() throws Exception {

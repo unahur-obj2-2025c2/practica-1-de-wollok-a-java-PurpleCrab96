@@ -1,6 +1,8 @@
 package ar.edu.planes;
 
-public class PlanPremium implements PlanSuscribible{
+import ar.edu.usuario.Usuario;
+
+public class PlanPremium implements PlanSuscribible {
     private double costoPlan;
 
     private PlanPremium(double costoPlan) {

@@ -1,5 +1,9 @@
 package ar.edu.planes;
 
+import java.util.List;
+import ar.edu.usuario.Usuario;
+import ar.edu.contenido.Contenido;
+
 public class PlanBasico implements PlanSuscribible {
     private Integer limite;
     private double costoBasico;
@@ -13,7 +17,7 @@ public class PlanBasico implements PlanSuscribible {
     public double costoPlan(Usuario usuario) {
         List<Contenido> contenido = usuario.getContenido();
         List<Contenido> excedente = contenido.subList(limite, contenido.size());
-        if(limite >= contenido.size()) {
+        if (limite >= contenido.size()) {
             return costoBasico;
         } else {
             return costoBasico + excedente.stream().mapToDouble(Contenido::getCosto).sum();

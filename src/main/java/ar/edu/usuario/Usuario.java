@@ -1,5 +1,10 @@
 package ar.edu.usuario;
 
+import java.util.ArrayList;
+import java.util.List;
+import ar.edu.contenido.Contenido;
+import ar.edu.planes.PlanSuscribible;
+
 public class Usuario {
     private PlanSuscribible plan;
     private List<Contenido> contenido = new ArrayList<>();
@@ -28,3 +33,4 @@ public class Usuario {
     public void agregarContenido(Contenido contenido) {
         this.contenido.add(contenido);
     }
+}

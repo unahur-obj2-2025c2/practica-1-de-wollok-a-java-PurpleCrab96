@@ -1,5 +1,6 @@
 package ar.edu.contenido;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Serie extends Contenido {
